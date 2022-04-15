@@ -57,8 +57,9 @@ import org.cleartk.ml.encoder.features.NameNumber;
 import org.cleartk.ml.encoder.outcome.OutcomeEncoder;
 import org.cleartk.util.InputStreamHandler;
 import org.cleartk.util.PlatformDetection;
+import org.dkpro.core.api.resources.ResourceUtils;
 
-import de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceUtils;
+
 
 /**
  * <br>

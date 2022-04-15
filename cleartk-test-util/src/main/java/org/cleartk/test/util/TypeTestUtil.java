@@ -115,15 +115,15 @@ public class TypeTestUtil {
           Object fs = fsType.getConstructor(JCas.class).newInstance(jcas);
           value.set(0, (FeatureStructure) fs);
           method.invoke(top, new Object[] { value });
-          method = top.jcasType.getClass().getMethod("set" + suffix, int.class, int.class);
-          method.invoke(top.jcasType, new Object[] { top.getAddress(), value.getAddress() });
+          method = top.getType().getClass().getMethod("set" + suffix, int.class, int.class);
+          method.invoke(top.getType(), new Object[] { top.getAddress(), value.getAddress() });
         }
         if (types[0].equals(StringArray.class)) {
           StringArray value = new StringArray(jcas, 1);
           value.set(0, "foo");
           method.invoke(top, new Object[] { value });
-          method = top.jcasType.getClass().getMethod(name, int.class, int.class);
-          method.invoke(top.jcasType, new Object[] { top.getAddress(), value.getAddress() });
+          method = top.getType().getClass().getMethod(name, int.class, int.class);
+          method.invoke(top.getType(), new Object[] { top.getAddress(), value.getAddress() });
         }
       }
     }
@@ -150,8 +150,8 @@ public class TypeTestUtil {
           method.invoke(top, values);
           jcasTypes[0] = int.class;
           jcasTypeValues[0] = top.getAddress();
-          method = top.jcasType.getClass().getMethod(name, jcasTypes);
-          method.invoke(top.jcasType, jcasTypeValues);
+          method = top.getType().getClass().getMethod(name, jcasTypes);
+          method.invoke(top.getType(), jcasTypeValues);
         }
       }
     }

@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.TreeMap;
+import java.util.function.IntPredicate;
 
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -489,6 +490,36 @@ public class TempEval2013Writer extends JCasAnnotator_ImplBase {
     @Override
     public String getCoveredText() {
       throw new UnsupportedOperationException();
+    }
+
+    public int _id() {
+      // TODO Auto-generated method stub
+      return 0;
+    }
+
+    public int _getTypeCode() {
+      // TODO Auto-generated method stub
+      return 0;
+    }
+
+    public int getAddress() {
+      // TODO Auto-generated method stub
+      return 0;
+    }
+
+    public void setBegin(int begin) {
+      // TODO Auto-generated method stub
+      
+    }
+
+    public void setEnd(int end) {
+      // TODO Auto-generated method stub
+      
+    }
+
+    public void trim(IntPredicate aPredicate) {
+      // TODO Auto-generated method stub
+      
     }
   }
 }
